@@ -19,7 +19,7 @@ namespace SOLID.OCP
             {
                 case '1':
                     Console.WriteLine($" - OCP Violação");
-                    var debitViolation = new AccountDebit();
+                    var debitViolation = new OCP.Violation.Services.AccountDebit();
 
                     debitViolation.Debit(
                         value: DebitAmount,

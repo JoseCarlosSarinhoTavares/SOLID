@@ -1,12 +1,20 @@
-﻿using SOLID.OCP.Solution.ExtensionMethods.Common;
+using SOLID.OCP.Solution.ExtensionMethods.Models;
 
 namespace SOLID.OCP.Solution.ExtensionMethods.Services
 {
+    /*
+     * InvestmentAccountDebit - Extensão para Débito em Conta Investimento
+     * 
+     * OCP - Solução com Extension Methods
+     * 
+     * REGRA DE NEGÓCIO:
+     * - Conta Investimento tem valor mínimo para resgate
+     * - Débito apenas se >= R$ 100,00
+     */
     internal static class InvestmentAccountDebit
     {
         public static string DebitInvestmentAccount(this AccountDebit accountDebit)
         {
-            // Regra: conta investimento só permite débito acima de um valor mínimo
             const decimal minimumAmount = 100;
 
             if (accountDebit.Amount < minimumAmount)

@@ -1,4 +1,4 @@
-﻿using SOLID.OCP.Solution.ExtensionMethods.Common;
+using SOLID.OCP.Solution.ExtensionMethods.Models;
 using SOLID.OCP.Solution.ExtensionMethods.Services;
 
 namespace SOLID.OCP.Solution.ExtensionMethods.Application

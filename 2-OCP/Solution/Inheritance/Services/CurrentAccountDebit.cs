@@ -1,12 +1,27 @@
-﻿using SOLID.OCP.Solution.Inheritance.Abstractions;
+using SOLID.OCP.Solution.Inheritance.Abstractions;
 
 namespace SOLID.OCP.Solution.Inheritance.Services
 {
+    /*
+     * CurrentAccountDebit - Implementação de Débito para Conta Corrente
+     * 
+     * OCP - Solução com Herança
+     * 
+     * COMO ADICIONAR NOVA CONTA:
+     * 1. Crie novo arquivo: NovoTipoDebit.cs
+     * 2. Herde: class NovoTipoDebit : AccountDebit
+     * 3. Implemente: override string Debit(...)
+     * 
+     * ZERO alteração em arquivos existentes!
+     * 
+     * REGRA DE NEGÓCIO:
+     * - Conta Corrente tem limite de cheque especial
+     * - Permite saldo negativo até R$ 500,00
+     */
     internal class CurrentAccountDebit : AccountDebit
     {
         public override string Debit(decimal amount, string account)
         {
-            // Regra: conta corrente permite débito usando saldo + cheque especial
             const decimal overdraftLimit = 500;
             decimal balance = 1000;
 

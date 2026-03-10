@@ -38,8 +38,3 @@ dotnet run --project 3-LSP
 dotnet run --project 4-ISP
 dotnet run --project 5-DIP
 ```
-
-Ou abra a solução no Visual Studio/VS Code:
-```bash
-code .
-```
